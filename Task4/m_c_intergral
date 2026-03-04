@@ -1,0 +1,21 @@
+import numpy as np
+from numpy import sin, cos, tan, log, log10 
+import scipy.integrate as integrate
+from scipy.integrate import quad
+import math
+
+# user inputs
+s= (input('user supplied input function: f(x)= '))
+a= float(input('upper bound'))
+b= float(input('lower bound'))
+
+# The small intervals between a intergral
+x = np.linspace(b, a, 100000)
+
+# Evaluates sting as a python code
+f = eval(s)
+
+# givven formula
+intergral = (a - b) * np.mean(f)
+
+print(intergral)
